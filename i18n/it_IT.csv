@@ -1,0 +1,39 @@
+"Same Frame","Stesso Frame"
+"New Window","Nuova finestra"
+Top,In alto
+Bottom,Inbasso
+"Field must have length of 6","Il campo deve essere lungo 6"
+"Cookie Notification","Cookie Notification"
+"Functional Settings","Configurazioni funzionali"
+"Enable Module","Abilita il modulo"
+"Enable / disable module","Abilita / disabilita il modulo"
+"Cookie Lifetime","Cookie Lifetime"
+"Default value is 3600","Il valore di default &egrave; 3600"
+"Cookie Path","Cookie Path"
+"Cookie Domain","Cookie Domain"
+"Design Settings","Configurazioni grafiche"
+"Message Position","Posizione del messaggio"
+"Where the cookie message should appear","Dove dovrebbe apparire il messaggio dei cookie"
+Message,Messaggio
+"Message Text Color","Colore del testo del messaggio"
+"Exadecimal value, without #: ex. FFFFFF","Valore esadecimale, senza #: ex. FFFFFF"
+"Message Background Color","Colore dello sfondo del messaggio"
+"Cookie More Button Text","Testo del bottone Cookie More"
+"Cookie More Button Text Color","Colore del testo del bottone Cookie More"
+"Cookie More Button Background Color","Colore dello sfondo del bottone Cookie More"
+"Cookie More Button Link","Link del bottone Cookie More"
+"Cookie More Button Link Destination","Destinazione del link del bottone Cookie More"
+"
+                        <br />
+                        <strong>Same Frame</strong>: Opens the window in the same frame, it means existing window itself.<br />
+                        <strong>New Window</strong>: Opens a new window and show the related data.
+
+                    ","
+                        <br />
+                        <strong>Stesso Frame</strong>: Apre la finestra nello stesso frame, quindi nella stessa finestra.<br />
+                        <strong>Nuova finestra</strong>: Apre la pagina in una nuova finestra.
+
+                    "
+"Cookie Allow Button Text","Testo del bottone Cookie Allow"
+"Cookie Allow Button Text Color","Colore del testo del bottone Cookie Allow"
+"Cookie Allow Button Background Color","Colore dello sfondo del bottone Cookie Allow"

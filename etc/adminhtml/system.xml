@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * WaPoNe
+ *
+ * @category   WaPoNe
+ * @package    WaPoNe_CookieNotification
+ * @copyright  Copyright (c) 2017 WaPoNe (http://www.fantetti.net)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="cookienotification" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Cookie Notification</label>
+            <tab>wapone</tab>
+            <resource>WaPoNe_CookieNotification::config_cookienotification</resource>
+            <group id="functional" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Functional Settings</label>
+                <field id="activation" translate="label comment" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Module</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable / disable module</comment>
+                </field>
+                <field id="lifetime" translate="label comment" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Cookie Lifetime</label>
+                    <validate>validate-number</validate>
+                    <comment>Default value is 3600</comment>
+                </field>
+                <field id="path" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Cookie Path</label>
+                </field>
+                <field id="domain" translate="label" type="text" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Cookie Domain</label>
+                </field>
+            </group>
+            <group id="design" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Design Settings</label>
+                <field id="position" translate="label comment" type="radios" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Message Position</label>
+                    <source_model>WaPoNe\CookieNotification\Model\Config\Backend\Position</source_model>
+                    <comment>Where the cookie message should appear</comment>
+                </field>
+                <field id="message" translate="label" type="textarea" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Message</label>
+                </field>
+                <field id="message_text_color" translate="label comment" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Message Text Color</label>
+                    <validate>validate-exadecimal-color-length validate-alphanum</validate>
+                    <comment>Exadecimal value, without #: ex. FFFFFF</comment>
+                </field>
+                <field id="message_background_color" translate="label comment" type="text" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Message Background Color</label>
+                    <validate>validate-exadecimal-color-length validate-alphanum</validate>
+                    <comment>Exadecimal value, without #: ex. FFFFFF</comment>
+                </field>
+                <field id="btn_more_text" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Cookie More Button Text</label>
+                </field>
+                <field id="btn_more_text_color" translate="label comment" type="text" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Cookie More Button Text Color</label>
+                    <validate>validate-exadecimal-color-length validate-alphanum</validate>
+                    <comment>Exadecimal value, without #: ex. FFFFFF</comment>
+                </field>
+                <field id="btn_more_background_color" translate="label comment" type="text" sortOrder="7" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Cookie More Button Background Color</label>
+                    <validate>validate-exadecimal-color-length validate-alphanum</validate>
+                    <comment>Exadecimal value, without #: ex. FFFFFF</comment>
+                </field>
+                <field id="btn_more_link" translate="label" type="select" sortOrder="8" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Cookie More Button Link</label>
+                    <source_model>WaPoNe\CookieNotification\Model\Config\Backend\CMSPageList</source_model>
+                </field>
+                <field id="btn_more_link_destination" translate="label comment" type="select" sortOrder="8" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Cookie More Button Link Destination</label>
+                    <source_model>WaPoNe\CookieNotification\Model\Config\Backend\LinkDestination</source_model>
+                    <validate>validate-select</validate>
+                    <comment>
+                        <![CDATA[<br />
+                        <strong>Same Frame</strong>: Opens the window in the same frame, it means existing window itself.<br />
+                        <strong>New Window</strong>: Opens a new window and show the related data.
+                        ]]>
+                    </comment>
+                </field>
+                <field id="btn_allow_text" translate="label" type="text" sortOrder="9" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Cookie Allow Button Text</label>
+                </field>
+                <field id="btn_allow_text_color" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Cookie Allow Button Text Color</label>
+                    <validate>validate-exadecimal-color-length validate-alphanum</validate>
+                    <comment>Exadecimal value, without #: ex. FFFFFF</comment>
+                </field>
+                <field id="btn_allow_background_color" translate="label comment" type="text" sortOrder="11" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Cookie Allow Button Background Color</label>
+                    <validate>validate-exadecimal-color-length validate-alphanum</validate>
+                    <comment>Exadecimal value, without #: ex. FFFFFF</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * WaPoNe
+ *
+ * @category   WaPoNe
+ * @package    WaPoNe_CookieNotification
+ * @copyright  Copyright (c) 2017 WaPoNe (http://www.fantetti.net)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <cookienotification>
+            <functional>
+                <activation>1</activation>
+                <lifetime>3600</lifetime>
+            </functional>
+            <design>
+                <message>This website uses cookies to improve your experience.</message>
+                <message_text_color>333333</message_text_color>
+                <message_background_color>FFEE9C</message_background_color>
+                <btn_more_text>More Info</btn_more_text>
+                <btn_more_text_color>000000</btn_more_text_color>
+                <btn_more_background_color>FFFFFF</btn_more_background_color>
+                <btn_more_link_destination>1</btn_more_link_destination>
+                <btn_allow_text>Allow Cookies</btn_allow_text>
+                <btn_allow_text_color>FFFFFF</btn_allow_text_color>
+                <btn_allow_background_color>000000</btn_allow_background_color>
+                <position>top</position>
+            </design>
+        </cookienotification>
+    </default>
+</config>

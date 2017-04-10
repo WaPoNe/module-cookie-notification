@@ -1,0 +1,48 @@
+<?php
+/**
+ * WaPoNe
+ *
+ * @category   WaPoNe
+ * @package    WaPoNe_CookieNotification
+ * @copyright  Copyright (c) 2017 WaPoNe (http://www.fantetti.net)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+
+if ($block->getModuleActivation()) {
+    ?>
+
+    <div id="cookienotification-block"
+         style="display: none;
+            <?php echo $block->getCookiePosition() ?>;
+             background-color:<?php echo $block->getCookieMessageBackgroundColor() ?>;
+             color:<?php echo $block->getCookieMessageTextColor() ?>;">
+        <p><?php echo $block->getCookieMessage() ?></p>
+        <button id="btn-cookienotification-more"
+                style="background-color:<?php echo $block->getCookieMoreButtonBackgroundColor() ?>;" >
+            <span style="color:<?php echo $block->getCookieMoreButtonTextColor() ?>;"><?php echo $block->getCookieMoreButtonText() ?></span>
+        </button>
+        <button id="btn-cookienotification-allow"
+                style="background-color:<?php echo $block->getCookieAllowButtonBackgroundColor() ?>;" >
+            <span style="color:<?php echo $block->getCookieAllowButtonTextColor() ?>;"><?php echo $block->getCookieAllowButtonText() ?></span>
+        </button>
+    </div>
+
+    <script type="text/x-magento-init">
+        {
+            "#cookienotification-block": {
+                "cookieNotification": {
+                    "cookieAllowButtonSelector": "#btn-cookienotification-allow",
+                    "cookieName": "<?php /* @escapeNotVerified */ echo $block->getCookieName() ?>",
+                    "cookieValue": <?php /* @escapeNotVerified */ echo $this->helper('Magento\Cookie\Helper\Cookie')->getAcceptedSaveCookiesWebsiteIds() ?>,
+                    "cookieLifetime": <?php /* @escapeNotVerified */ echo $block->getCookieLifetime() ?>,
+                    "cookiePath": "<?php /* @escapeNotVerified */ echo $block->getCookiePath() ?>",
+                    "cookieDomain": "<?php /* @escapeNotVerified */ echo $block->getCookieDomain() ?>",
+                    "cookieMoreButtonSelector": "#btn-cookienotification-more",
+                    "cookieMoreLink": "<?php /* @escapeNotVerified */ echo $block->getCookieMoreButtonLink() ?>",
+                    "cookieMoreLinkDestination": <?php /* @escapeNotVerified */ echo $block->getCookieMoreButtonLinkDestination() ?>
+                }
+            }
+        }
+    </script>
+
+<?php } ?>
