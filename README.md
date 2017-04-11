@@ -2,6 +2,12 @@
 
 <img src="https://cloud.githubusercontent.com/assets/11091926/24904030/73980286-1eaf-11e7-8e67-4cb7dcfbeb1a.png" align="left" height="100px" width="100px" /> **WaPoNe Cookie Notification** is a Magento 2 extension to inform users about use and management of your website cookies.
 
+<br /><br />
+
+## Final result
+
+![wapone_cookienotification_result](https://cloud.githubusercontent.com/assets/11091926/24914768/869a2fc8-1ed5-11e7-84cc-4e749bb72276.png)
+
 <br />
 
 ## Installation
