@@ -61,51 +61,62 @@ class CookieNotification extends \Magento\Framework\View\Element\Template
         return $this->_dataHelper->getConfig('cookienotification/design/message');
     }
 
-    public function getCookieMessageTextColor() {
-        return '#'.$this->_dataHelper->getConfig('cookienotification/design/message_text_color');
-    }
-
-    public function getCookieMessageBackgroundColor() {
-        return '#'.$this->_dataHelper->getConfig('cookienotification/design/message_background_color');
-    }
-
-    public function getCookieMoreButtonText() {
-        return $this->_dataHelper->getConfig('cookienotification/design/btn_more_text');
-    }
-
-    public function getCookieMoreButtonTextColor() {
-        return '#'.$this->_dataHelper->getConfig('cookienotification/design/btn_more_text_color');
-    }
-
-    public function getCookieMoreButtonLink() {
-        return $this->_dataHelper->getConfig('cookienotification/design/btn_more_link');
-    }
-
-    public function getCookieMoreButtonLinkDestination() {
-        return $this->_dataHelper->getConfig('cookienotification/design/btn_more_link_destination');
-    }
-
-    public function getCookieMoreButtonBackgroundColor() {
-        return '#'.$this->_dataHelper->getConfig('cookienotification/design/btn_more_background_color');
-    }
-
-    public function getCookieAllowButtonText() {
-        return $this->_dataHelper->getConfig('cookienotification/design/btn_allow_text');
-    }
-
-    public function getCookieAllowButtonTextColor() {
-        return '#'.$this->_dataHelper->getConfig('cookienotification/design/btn_allow_text_color');
-    }
-
-    public function getCookieAllowButtonBackgroundColor() {
-        return '#'.$this->_dataHelper->getConfig('cookienotification/design/btn_allow_background_color');
-    }
-
+    // Cookie Message Position (Top / Bottom)
     public function getCookiePosition() {
         switch ($this->_dataHelper->getConfig('cookienotification/design/position')) {
             case 'top': return 'top: 0;';
             case 'bottom': return 'bottom: 0;';
             default : return 'top: 0;';
         }
+    }
+
+    // Cookie Message Text Color
+    public function getCookieMessageTextColor() {
+        return '#'.$this->_dataHelper->getConfig('cookienotification/design/message_text_color');
+    }
+
+    // Cookie Message Background Color
+    public function getCookieMessageBackgroundColor() {
+        return '#'.$this->_dataHelper->getConfig('cookienotification/design/message_background_color');
+    }
+
+    // 'More' Button Text
+    public function getCookieMoreButtonText() {
+        return $this->_dataHelper->getConfig('cookienotification/design/btn_more_text');
+    }
+
+    // 'More' Button Text Color
+    public function getCookieMoreButtonTextColor() {
+        return '#'.$this->_dataHelper->getConfig('cookienotification/design/btn_more_text_color');
+    }
+
+    // 'More' Button Background Color
+    public function getCookieMoreButtonBackgroundColor() {
+        return '#'.$this->_dataHelper->getConfig('cookienotification/design/btn_more_background_color');
+    }
+
+    // 'More' Button Link Destination (Same Frame / New Window)
+    public function getCookieMoreButtonLinkDestination() {
+        return $this->_dataHelper->getConfig('cookienotification/design/btn_more_link_destination');
+    }
+
+    // 'More' Button Link
+    public function getCookieMoreButtonLink() {
+        return $this->_dataHelper->getConfig('cookienotification/design/btn_more_link');
+    }
+
+    // 'Allow' Button Text
+    public function getCookieAllowButtonText() {
+        return $this->_dataHelper->getConfig('cookienotification/design/btn_allow_text');
+    }
+
+    // 'Allow' Button Text Color
+    public function getCookieAllowButtonTextColor() {
+        return '#'.$this->_dataHelper->getConfig('cookienotification/design/btn_allow_text_color');
+    }
+
+    // 'Allow' Button Background Color
+    public function getCookieAllowButtonBackgroundColor() {
+        return '#'.$this->_dataHelper->getConfig('cookienotification/design/btn_allow_background_color');
     }
 }

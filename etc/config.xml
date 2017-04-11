@@ -24,6 +24,7 @@
                 <btn_more_text>More Info</btn_more_text>
                 <btn_more_text_color>000000</btn_more_text_color>
                 <btn_more_background_color>FFFFFF</btn_more_background_color>
+                <btn_more_link>privacy-policy-cookie-restriction-mode</btn_more_link>
                 <btn_more_link_destination>1</btn_more_link_destination>
                 <btn_allow_text>Allow Cookies</btn_allow_text>
                 <btn_allow_text_color>FFFFFF</btn_allow_text_color>
