@@ -13,16 +13,13 @@ namespace WaPoNe\CookieNotification\Block;
 class CookieNotification extends \Magento\Framework\View\Element\Template
 {
     protected $_dataHelper;
-    protected $_storeManager;
 
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context,
         \WaPoNe\CookieNotification\Helper\Data $dataHelper,
-        \Magento\Store\Model\StoreManagerInterface $storeManager,
         array $data)
     {
         $this->_dataHelper = $dataHelper;
-        $this->_storeManager = $storeManager;
         parent::__construct($context, $data);
     }
 
