@@ -23,6 +23,8 @@ php bin/magento setup:di:compile
 php bin/magento setup:static-content:deploy
 ```
 
+If you don't use *composer* to install the module but you download it directly, you also have to download https://github.com/WaPoNe/module-wapone-base module.
+
 ## User Guide
 
 ### Configuration
