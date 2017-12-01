@@ -17,7 +17,7 @@
 Run the following command in Magento 2 root folder
 
 ```
-composer require wapone/module-stickers
+composer require wapone/module-cookie-notification
 php bin/magento setup:upgrade
 php bin/magento setup:di:compile
 php bin/magento setup:static-content:deploy

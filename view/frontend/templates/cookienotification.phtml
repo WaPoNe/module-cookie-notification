@@ -13,9 +13,9 @@ if ($block->getModuleActivation()) {
 
     <div id="cookienotification-block"
          style="display: none;
-            <?php echo $block->getCookiePosition() ?>;
-             background-color:<?php echo $block->getCookieMessageBackgroundColor() ?>;
-             color:<?php echo $block->getCookieMessageTextColor() ?>;">
+            <?php echo $block->getCookiePosition() ?>
+             background-color: <?php echo $block->getCookieMessageBackgroundColor() ?>;
+             color: <?php echo $block->getCookieMessageTextColor() ?>;">
         <p><?php echo $block->getCookieMessage() ?></p>
         <button id="btn-cookienotification-more"
                 style="background-color:<?php echo $block->getCookieMoreButtonBackgroundColor() ?>;" >
