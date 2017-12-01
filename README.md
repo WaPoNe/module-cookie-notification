@@ -57,3 +57,4 @@ Go to Stores > Settings > Configuration > WaPoNe > Cookie Notification.
 
 - Magento CE:
   - 2.1.x
+  - 2.2.x
