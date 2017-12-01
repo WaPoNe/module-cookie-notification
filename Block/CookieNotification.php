@@ -13,13 +13,16 @@ namespace WaPoNe\CookieNotification\Block;
 class CookieNotification extends \Magento\Framework\View\Element\Template
 {
     protected $_dataHelper;
+    protected $_storeManager;
 
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context,
         \WaPoNe\CookieNotification\Helper\Data $dataHelper,
+        \Magento\Store\Model\StoreManagerInterface $storeManager,
         array $data)
     {
         $this->_dataHelper = $dataHelper;
+        $this->_storeManager = $storeManager;
         parent::__construct($context, $data);
     }
 
@@ -45,7 +48,8 @@ class CookieNotification extends \Magento\Framework\View\Element\Template
 
     // Cookie Path
     public function getCookiePath() {
-        return $this->_dataHelper->getConfig('cookienotification/functional/path');
+        $cookiePath = $this->_dataHelper->getConfig('cookienotification/functional/path') ? $this->_dataHelper->getConfig('cookienotification/functional/path') : "/";
+        return $cookiePath;
     }
 
     // Cookie Domain
@@ -99,7 +103,7 @@ class CookieNotification extends \Magento\Framework\View\Element\Template
 
     // 'More' Button Link
     public function getCookieMoreButtonLink() {
-        return $this->_dataHelper->getConfig('cookienotification/design/btn_more_link');
+        return $this->_storeManager->getStore()->getBaseUrl() . $this->_dataHelper->getConfig('cookienotification/design/btn_more_link');
     }
 
     // 'Allow' Button Text
