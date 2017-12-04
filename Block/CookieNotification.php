@@ -18,11 +18,10 @@ class CookieNotification extends \Magento\Framework\View\Element\Template
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context,
         \WaPoNe\CookieNotification\Helper\Data $dataHelper,
-        \Magento\Store\Model\StoreManagerInterface $storeManager,
         array $data)
     {
         $this->_dataHelper = $dataHelper;
-        $this->_storeManager = $storeManager;
+        $this->_storeManager = $context->getStoreManager();
         parent::__construct($context, $data);
     }
 
