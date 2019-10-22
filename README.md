@@ -59,3 +59,7 @@ Go to Stores > Settings > Configuration > WaPoNe > Cookie Notification.
   - 2.1.x
   - 2.2.x
   - 2.3.x
+  
+## Thanks to
+
+- @nadeem0035
