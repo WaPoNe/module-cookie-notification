@@ -53,8 +53,9 @@ Go to Stores > Settings > Configuration > WaPoNe > Cookie Notification.
 11. Insert an exadecimal value to set the color of *Cookie Allow Button Text*
 12. Insert an exadecimal value to set the color of *Cookie Allow Button Background*
 
-## Compability
+## Compatibility
 
 - Magento CE:
   - 2.1.x
   - 2.2.x
+  - 2.3.x
