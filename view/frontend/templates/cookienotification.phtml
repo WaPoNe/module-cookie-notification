@@ -1,29 +1,35 @@
 <?php
+declare(strict_types=1);
 /**
- * WaPoNe
+ * Cookie Notification
  *
- * @category   WaPoNe
+ * @category   Content & Customizations
  * @package    WaPoNe_CookieNotification
- * @copyright  Copyright (c) 2017 WaPoNe (http://www.fantetti.net)
+ * @author     Michele Fantetti <michele@fantetti.net>
+ * @copyright  Copyright (c) 2017-2020 WaPoNe (https://www.fantetti.net)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
-if ($block->getModuleActivation()) {
+/** @var $block \Magento\Framework\View\Element\Template */
+/** @var $view \WaPoNe\CookieNotification\ViewModel\CookieDetails */
+$view = $block->getData('details');
+
+if ($view->getModuleActivation()) {
     ?>
 
     <div id="cookienotification-block"
          style="display: none;
-            <?php echo $block->getCookiePosition() ?>
-             background-color: <?php echo $block->getCookieMessageBackgroundColor() ?>;
-             color: <?php echo $block->getCookieMessageTextColor() ?>;">
-        <p><?php echo $block->getCookieMessage() ?></p>
+            <?php echo $view->getCookiePosition() ?>
+             background-color: <?php echo $view->getCookieMessageBackgroundColor() ?>;
+             color: <?php echo $view->getCookieMessageTextColor() ?>;">
+        <p><?php echo $view->getCookieMessage() ?></p>
         <button id="btn-cookienotification-more"
-                style="background-color:<?php echo $block->getCookieMoreButtonBackgroundColor() ?>;" >
-            <span style="color:<?php echo $block->getCookieMoreButtonTextColor() ?>;"><?php echo $block->getCookieMoreButtonText() ?></span>
+                style="background-color:<?php echo $view->getCookieMoreButtonBackgroundColor() ?>;" >
+            <span style="color:<?php echo $block->getCookieMoreButtonTextColor() ?>;"><?php echo $view->getCookieMoreButtonText() ?></span>
         </button>
         <button id="btn-cookienotification-allow"
-                style="background-color:<?php echo $block->getCookieAllowButtonBackgroundColor() ?>;" >
-            <span style="color:<?php echo $block->getCookieAllowButtonTextColor() ?>;"><?php echo $block->getCookieAllowButtonText() ?></span>
+                style="background-color:<?php echo $view->getCookieAllowButtonBackgroundColor() ?>;" >
+            <span style="color:<?php echo $view->getCookieAllowButtonTextColor() ?>;"><?php echo $view->getCookieAllowButtonText() ?></span>
         </button>
     </div>
 
@@ -32,14 +38,14 @@ if ($block->getModuleActivation()) {
             "#cookienotification-block": {
                 "cookieNotification": {
                     "cookieAllowButtonSelector": "#btn-cookienotification-allow",
-                    "cookieName": "<?php /* @escapeNotVerified */ echo $block->getCookieName() ?>",
+                    "cookieName": "<?php /* @escapeNotVerified */ echo $view->getCookieName() ?>",
                     "cookieValue": <?php /* @escapeNotVerified */ echo $this->helper('Magento\Cookie\Helper\Cookie')->getAcceptedSaveCookiesWebsiteIds() ?>,
-                    "cookieLifetime": <?php /* @escapeNotVerified */ echo $block->getCookieLifetime() ?>,
-                    "cookiePath": "<?php /* @escapeNotVerified */ echo $block->getCookiePath() ?>",
-                    "cookieDomain": "<?php /* @escapeNotVerified */ echo $block->getCookieDomain() ?>",
+                    "cookieLifetime": <?php /* @escapeNotVerified */ echo $view->getCookieLifetime() ?>,
+                    "cookiePath": "<?php /* @escapeNotVerified */ echo $view->getCookiePath() ?>",
+                    "cookieDomain": "<?php /* @escapeNotVerified */ echo $view->getCookieDomain() ?>",
                     "cookieMoreButtonSelector": "#btn-cookienotification-more",
-                    "cookieMoreLink": "<?php /* @escapeNotVerified */ echo $block->getCookieMoreButtonLink() ?>",
-                    "cookieMoreLinkDestination": <?php /* @escapeNotVerified */ echo $block->getCookieMoreButtonLinkDestination() ?>
+                    "cookieMoreLink": "<?php /* @escapeNotVerified */ echo $view->getCookieMoreButtonLink() ?>",
+                    "cookieMoreLinkDestination": <?php /* @escapeNotVerified */ echo $view->getCookieMoreButtonLinkDestination() ?>
                 }
             }
         }

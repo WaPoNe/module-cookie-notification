@@ -1,16 +1,24 @@
 <?php
+declare(strict_types=1);
 /**
- * WaPoNe
+ * Cookie Notification
  *
- * @category   WaPoNe
+ * @category   Content & Customizations
  * @package    WaPoNe_CookieNotification
- * @copyright  Copyright (c) 2017 WaPoNe (http://www.fantetti.net)
+ * @author     Michele Fantetti <michele@fantetti.net>
+ * @copyright  Copyright (c) 2017-2020 WaPoNe (https://www.fantetti.net)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
 namespace WaPoNe\CookieNotification\Model\Config\Backend;
 
-class LinkDestination implements \Magento\Framework\Option\ArrayInterface
+use Magento\Framework\Option\ArrayInterface;
+
+/**
+ * Class LinkDestination
+ * @package WaPoNe\CookieNotification\Model\Config\Backend
+ */
+class LinkDestination implements ArrayInterface
 {
     public function toOptionArray()
     {

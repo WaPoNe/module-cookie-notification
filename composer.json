@@ -1,6 +1,6 @@
 {
     "name": "wapone/module-cookie-notification",
-    "description": "Magento 2 extension to inform users about use and management of your website cookies",
+    "description": "Magento 2 extension to inform users about the use and the management of your website cookies",
     "type": "magento2-module",
     "version": "0.0.3",
     "license": [
@@ -14,7 +14,7 @@
     "authors": [{
         "name": "WaPoNe",
         "email": "michele@fantetti.net",
-        "homepage": "http://www.fantetti.net",
+        "homepage": "https://www.fantetti.net",
         "role": "Developer"
     }],
     "autoload": {

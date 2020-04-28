@@ -1,9 +1,10 @@
 /**
- * WaPoNe
+ * Cookie Notification
  *
- * @category   WaPoNe
+ * @category   Content & Customizations
  * @package    WaPoNe_CookieNotification
- * @copyright  Copyright (c) 2017 WaPoNe (http://www.fantetti.net)
+ * @author     Michele Fantetti <michele@fantetti.net>
+ * @copyright  Copyright (c) 2017-2020 WaPoNe (https://www.fantetti.net)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 

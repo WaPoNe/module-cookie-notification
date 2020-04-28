@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 /**
  * WaPoNe
  *
@@ -10,7 +11,13 @@
 
 namespace WaPoNe\CookieNotification\Model\Config\Backend;
 
-class Position implements \Magento\Framework\Option\ArrayInterface
+use Magento\Framework\Option\ArrayInterface;
+
+/**
+ * Class Position
+ * @package WaPoNe\CookieNotification\Model\Config\Backend
+ */
+class Position implements ArrayInterface
 {
     public function toOptionArray()
     {
